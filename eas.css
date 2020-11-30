@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+    width: 90vh;
+}
+
+.header {
+    height: 10vh;
+    width: 100%;
+    display: 100%;
+}
+
+.main {
+    display: grid;
+    border: 1px black solid;
+    height: 90vh;
+    width: 90vh;
+
+}
+
+input {
+    text-align: center;
+    width: 50px;
+}
