@@ -6,8 +6,9 @@ main.style.gridAutoColumns=`${100/square}%`;
 
 const button = document.querySelector('button');
 let numInput = document.getElementById("numsquares");
+
 let numSquares = parseInt(document.getElementById("numsquares").value, 10);
-let pixel = document.querySelector('.child');
+
 
 const colours = [
     'red', 
@@ -35,6 +36,9 @@ function squareDraw(square){
         div.style.backgroundColor = 'black';
         main.appendChild(div);
     };
+    
+    pixelColors();
+
 };
 
 squareDraw(numSquares);
@@ -45,13 +49,31 @@ button.addEventListener("click", () => {
 });
 
 numInput.addEventListener("keypress", function (e) {
-
-    console.log("ecode" + e.code + " keyCode: " + e.keyCode);
     if (e.keyCode === 13) {
         e.preventDefault();
         button.click();
     }
-
 });
 
+
+
+function pixelColors( ) {
+
+    let pixelList = document.querySelectorAll(".child")
+
+    pixelList.forEach(
+        function(pixel) {
+            pixel.addEventListener("mouseover", (e) => {
+            console.log(e.id);
+            pixel.style.backgroundColor = 'red';
+        })
+    });
+
+    /*for (let pixel of pixelList) {
+        pixel.addEventListener('mouseover', (e) => {
+            console.log(e.id);
+            pixel.style.backgroundColor = 'red';
+        })
+    };*/
+};
 
