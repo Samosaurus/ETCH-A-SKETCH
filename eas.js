@@ -9,6 +9,9 @@ let numInput = document.getElementById("numsquares");
 
 let numSquares = parseInt(document.getElementById("numsquares").value, 10);
 
+let colorInput = document.getElementById("colour");
+let colorSelect = 'red';
+
 
 const colours = [
     'red', 
@@ -36,9 +39,8 @@ function squareDraw(square){
         div.style.backgroundColor = 'black';
         main.appendChild(div);
     };
-    
-    pixelColors();
 
+    pixelColors();
 };
 
 squareDraw(numSquares);
@@ -55,7 +57,10 @@ numInput.addEventListener("keypress", function (e) {
     }
 });
 
-
+colorInput.addEventListener("change", (e) => {
+    console.log(`e.target.value = ${e.target.value + typeof e.target.value}`);
+    colorSelect = e.target.value;
+});
 
 function pixelColors( ) {
 
@@ -64,14 +69,15 @@ function pixelColors( ) {
     pixelList.forEach(
         function(pixel) {
             pixel.addEventListener("mouseover", (e) => {
-            console.log(e.id);
-            pixel.style.backgroundColor = 'red';
+            console.log(e.target.id);
+            pixel.style.backgroundColor = colorSelect;
         })
     });
 
-    /*for (let pixel of pixelList) {
+    /* for of loop version, also works
+    for (let pixel of pixelList) {
         pixel.addEventListener('mouseover', (e) => {
-            console.log(e.id);
+            console.log(e.target.id);
             pixel.style.backgroundColor = 'red';
         })
     };*/
