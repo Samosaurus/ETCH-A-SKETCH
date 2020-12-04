@@ -2,7 +2,8 @@
 
 const main = document.querySelector('.main');
 
-const button = document.querySelector('button');
+const button = document.getElementById("genbutton");
+const clearButton = document.getElementById("clearbutton");
 let numInput = document.getElementById("numsquares");
 
 let numSquares = Number(document.getElementById("numsquares").value);
@@ -53,6 +54,10 @@ button.addEventListener("click", () => {
     }
     main.innerHTML = "";
     squareDraw(numSquares);
+});
+
+clearButton.addEventListener("click", () => {
+    button.click();
 });
 
 numInput.addEventListener("keypress", function (e) {

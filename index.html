@@ -13,15 +13,16 @@
 <body>
 
     <div class = "header">
+
         <form id="form1">
-        
+            <h1>Welcome to Sam's ETCH-A-SKETCH!</h1>
             <div id="pixelpicker">
                 <lable for ="numsquares">How many pixels do you want?</lable>
                 <input type="number" id="numsquares" name="numsquares" min="1" max="100" value="16" step="1">
                 <button type="button" id="genbutton">Generate!</button>
             </div>
             <div id="colourpicker">
-                <lable for ="colour">Choose a Colour</lable>
+                <lable for ="colour">Choose a colour</lable>
                 <select name="colour" id="colour">
                     <option value="hsl(0, 100%, 50%)">red</option>
                     <option value="hsl(39, 100%, 50%)">orange</option>
@@ -35,6 +36,7 @@
                     <option value="rainbow">rainbow</option>
                     <option value="random">random</option>
                 </select>
+                <button type="button" id="clearbutton">Clear!</button>
             </div>
         </form>
     </div>

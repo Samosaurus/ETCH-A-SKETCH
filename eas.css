@@ -3,33 +3,65 @@ body {
     flex-direction: column;
     text-align: center;
     width: 100%;
+    font-family:'Roboto',sans-serif;
+}
+
+button {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.1em 0.1em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    font-family:'Roboto',sans-serif;
+    font-weight:500;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.5s ease-in-out;
+    background-color: purple;
+    border:0.16em solid rgba(255,255,255,0);
+}
+
+button:hover {
+    background-color: #cc00cca3;
+    color: black;
+    transform: scale(1.05);
+    font-weight: 800;
+    border-color: #cc00cca3;
+    outline: none;
+}
+
+button:active {
+    border:0.16em solid rgba(255,255,255,0);
+    outline: none;
 }
 
 form {
     display: flex;
     flex-direction: column;
-
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-#pixelpicker #colourpicker {
-    flex: none | [ <'1'> <'1'>? || <'auto'> ]
+#pixelpicker, #colourpicker {
+    padding: 10px 0 10px 0;
 }
 
 .header {
-    margin: auto;
-    padding: 50px, 0, 5px, 0;
-    height: 10vh;
-    width: 90vh;
-    display: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 15vh;
+    width: 100%;
+
 }
 
 .main {
     margin: auto;
     display: grid;
     border: 1px black solid;
-    height: 90vh;
+    height: 85vh;
     width: 90vh;
-
 }
 
 input {
