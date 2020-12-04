@@ -15,24 +15,27 @@
     <div class = "header">
         <form id="form1">
         
-        <lable for ="numsquares">How many pixels do you want?</lable>
-        <input type="number" id="numsquares" name="numsquares" min="1" max="100" value="16" step="1">
-        <button type="button" id="genbutton">Generate!</button>
-
-        <lable for ="colour">Choose a Colour</lable>
-        <select name="colour" id="colour">
-             <option value="hsl(0, 100%, 50%)">red</option>
-             <option value="hsl(39, 100%, 50%)">orange</option>
-             <option value="hsl(60, 100%, 50%)">yellow</option>
-             <option value="hsl(120, 100%, 25%)">green</option>
-             <option value="hsl(240, 100%, 50%)">blue</option>
-             <option value="hsl(275, 100%, 25%)">indigo</option>
-             <option value="hsl(300, 100%, 25%)">purple</option>
-             <option value="hsl(0, 0%, 100%)">white</option>
-             <option value="hsl(0, 0%, 0%)">black</option>
-             <option value="rainbow">rainbow</option>
-             <option value="random">random</option>
-        </select>
+            <div id="pixelpicker">
+                <lable for ="numsquares">How many pixels do you want?</lable>
+                <input type="number" id="numsquares" name="numsquares" min="1" max="100" value="16" step="1">
+                <button type="button" id="genbutton">Generate!</button>
+            </div>
+            <div id="colourpicker">
+                <lable for ="colour">Choose a Colour</lable>
+                <select name="colour" id="colour">
+                    <option value="hsl(0, 100%, 50%)">red</option>
+                    <option value="hsl(39, 100%, 50%)">orange</option>
+                    <option value="hsl(60, 100%, 50%)">yellow</option>
+                    <option value="hsl(120, 100%, 25%)">green</option>
+                    <option value="hsl(240, 100%, 50%)">blue</option>
+                    <option value="hsl(275, 100%, 25%)">indigo</option>
+                    <option value="hsl(300, 100%, 25%)">purple</option>
+                    <option value="hsl(0, 0%, 100%)">white</option>
+                    <option value="hsl(0, 0%, 0%)">black</option>
+                    <option value="rainbow">rainbow</option>
+                    <option value="random">random</option>
+                </select>
+            </div>
         </form>
     </div>
     <div class = "main"></div> <!--end of main-->

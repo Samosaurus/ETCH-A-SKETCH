@@ -1,15 +1,30 @@
 body {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    width: 90vh;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#pixelpicker #colourpicker {
+    flex: none | [ <'1'> <'1'>? || <'auto'> ]
 }
 
 .header {
+    margin: auto;
+    padding: 50px, 0, 5px, 0;
     height: 10vh;
-    width: 100%;
+    width: 90vh;
     display: 100%;
 }
 
 .main {
+    margin: auto;
     display: grid;
     border: 1px black solid;
     height: 90vh;

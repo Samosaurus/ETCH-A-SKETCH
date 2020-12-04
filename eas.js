@@ -46,7 +46,10 @@ button.addEventListener("click", () => {
     numSquares = Number(document.getElementById("numsquares").value);
     if (numSquares > 100) {
         alert("Sorry, max size is 100x100!");
-        numSquares == 100;
+        numSquares = 100;
+    } else if (!Number.isInteger(numSquares) || numSquares < 1 ) {
+        alert("Sorry! Positive whole numbers only please!");
+        numSquares = 16;
     }
     main.innerHTML = "";
     squareDraw(numSquares);
@@ -89,9 +92,9 @@ function pixelColors( ) {
                         j++;
                     }
                     let rgbArray = e.target.style.backgroundColor.substring(4,).split(', ').join(')').split(')');
-                    console.log(rgbArray);
-                    let newRGBArray = rgbArray.map(e => parseInt(e) - (parseInt(e)/100*10));
-                    console.log(newRGBArray);
+                    console.log('current' + rgbArray);
+                    let newRGBArray = rgbArray.map(e => parseInt(e) - 25);
+                    console.log('updated' + newRGBArray);
                     pixel.style.backgroundColor = `rgb(
                         ${newRGBArray.slice(0,1)}, 
                         ${newRGBArray.slice(1,2)}, 
