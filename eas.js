@@ -90,7 +90,7 @@ function pixelColors( ) {
                     }
                     let rgbArray = e.target.style.backgroundColor.substring(4,).split(', ').join(')').split(')');
                     console.log(rgbArray);
-                    let newRGBArray = rgbArray.map(e => parseInt(e) - 25);
+                    let newRGBArray = rgbArray.map(e => parseInt(e) - (parseInt(e)/100*10));
                     console.log(newRGBArray);
                     pixel.style.backgroundColor = `rgb(
                         ${newRGBArray.slice(0,1)}, 
